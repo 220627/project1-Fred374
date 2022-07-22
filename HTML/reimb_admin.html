@@ -22,6 +22,7 @@
                 <thead>
                     <th><a href="./login.html">Login</a></th>
                     <th><a id="logout" href="">Logout</a></th>
+                    <th><a href="./reimb_insert.html">Request Reimbursement</a></th>
                 </thead>
             </table>
         </div>
@@ -53,10 +54,17 @@
         </div>
 
         <button id="getReimbBtn" class="btn btn-info">Get Reimbursements</button>
-
+        <button id="getOpenReimbBtn" class="btn btn-info">Get Open Reimbursements </button>
+        <button id="getYourReimbBtn" class="btn btn-info">Get Your Reimbursements</button>
+        <br>
+        <input id="reimbUserId" type="number"></input>
+        <button id="getUserReimbBtn" class="btn btn-info">Get Reimbursements For User</button>
+        <br>
+        <input id="reimbResolveId" type="number"></input>
+        <button id="resolve" class="btn btn-info">Resolve Reimbursement</button>
     </div>
 
-    <script src="reimb.js"></script>
+    <script src="reimb_admin.js"></script>
 </body>
 
 </html>

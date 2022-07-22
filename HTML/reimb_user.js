@@ -1,17 +1,20 @@
 const url = 'http://localhost:3001/';
+var reimbNum = 0;
 
-document.getElementById('getReimbBtn').onclick = getAllReimbs;
+document.getElementById('getReimbBtn').onclick = getYourReimbs;
 document.getElementById('logout').onclick = logoutFunction;
 
-async function getAllReimbs() {
+async function getYourReimbs() {
 
-    let response = await fetch(url + "all_reimbursements");
-    console.log(response);
+    let userId = document.cookie.split("=");
+    userId = userId[1].split(";");
+    userId = userId[0];
+    let response = await fetch(url + "user_reimbursements/" + userId);
 
     if (response.status === 200) {
         document.getElementById("reimbBody").innerHTML = "";
         let data = await response.json();
-
+        let i = 0;
         for (let reimb of data) {
             let row = document.createElement("tr");
             let cell = document.createElement("td");
@@ -46,12 +49,15 @@ async function getAllReimbs() {
             cell.innerHTML = reimb.int_res_id;
             row.appendChild(cell);
             document.getElementById("reimbBody").appendChild(row);
+            i++;
+            reimbNum++;
         }
     } else if (response.status === 401) {
         alert(response.status + " Error: This means you didn't log in");
     } else {
         alert(response.status + " Error : CHECK CONSOLE");
     }
+
 }
 
 async function logoutFunction() {

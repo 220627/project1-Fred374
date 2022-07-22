@@ -2,8 +2,6 @@ package com.revature;
 
 import com.revature.utils.ConnectionUtil;
 import com.revature.controllers.*;
-
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import io.javalin.Javalin;
@@ -54,9 +52,9 @@ public class Launcher extends Thread{
 		app.post("/logout", authControl.logoutHandler);
 		app.get("/all_reimbursements", reimbControl.getAllReimbHandler);
 		app.get("/open_reimbursements", reimbControl.getOpenReimbHandler);
-		app.get("/user_reimbursements", reimbControl.getReimbByUserCurHandler);
+		//app.get("/user_reimbursements", reimbControl.getReimbByUserCurHandler);
 		app.get("/user_reimbursements/:user_id", reimbControl.getReimbByUserAdminHandler);
-		app.get("/user_reimbursements/:reimb_id", reimbControl.getReimbHandler);
+		//app.get("/user_reimbursements/:reimb_id", reimbControl.getReimbHandler);
 		app.post("/insert_reimbursement", reimbControl.insertReimbHanlder);
 		app.post("/resolve_reimbursement/:reimb_id", reimbControl.resolveReimbHandler);
 		app.get("/get_user/:user_id", userControl.getUserHandler);

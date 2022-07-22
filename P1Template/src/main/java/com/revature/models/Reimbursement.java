@@ -15,6 +15,7 @@ public class Reimbursement {
 	private int int_status_id;
 	private int int_type_id;
 	private int int_res_id;
+	private String receipt;
 	
 	public Reimbursement(int int_reimb_id, int int_amount, Timestamp time_submitted, Timestamp time_resolved,
 			String str_description, int int_author_id, int int_resolver_id, int int_status_id, int int_type_id,
@@ -54,9 +55,9 @@ public class Reimbursement {
 	public String toString() {
 		return "Reimbursement [int_reimb_id=" + int_reimb_id + ", int_amount=" + int_amount + ", time_submitted="
 				+ time_submitted + ", time_resolved=" + time_resolved + ", str_description=" + str_description
-				+ ", user_author=" + user_author.getFirst_name() + " " + user_author.getLast_name()
-				+ ", int_resolver_id=" + user_resolver.getFirst_name() + " " + user_resolver.getLast_name()
-				+ ", int_status_id=" + int_status_id + ", int_type_id=" + int_type_id + ", int_res_id=" + int_res_id + "]";
+				+ ", user_author=" + user_author + ", user_resolver=" + user_resolver + ", int_status_id="
+				+ int_status_id + ", int_type_id=" + int_type_id + ", int_res_id=" + int_res_id + ", receipt="
+				+ receipt + "]";
 	}
 
 	public int getInt_reimb_id() {
@@ -148,5 +149,23 @@ public class Reimbursement {
 	public void setInt_res_id(int int_res_id) {
 		this.int_res_id = int_res_id;
 	}
+
+	public byte[] getReceipt() {
+		return receipt.getBytes();
+	}
+
+	public void setReceipt(byte[] receipt) {
+		this.receipt = receipt.toString();
+	}
+
+	public void setUser_author(User user_author) {
+		this.user_author = user_author;
+	}
+
+	public void setUser_resolver(User user_resolver) {
+		this.user_resolver = user_resolver;
+	}
+	
+	
 
 }
