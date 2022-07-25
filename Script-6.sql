@@ -55,7 +55,7 @@ INSERT INTO ers_reimbursement_types (reimb_type) VALUES ('Travel'), ('Food'), ('
 INSERT INTO ers_users (users_username, users_password, users_first_name, users_last_name, users_email, users_role_fk) VALUES ('FredK', '123robot', 'Fred', 'Kelemen', 'FredK@reimb.db', 1), ('GabeK', 'password', 'Gabe', 'Kelemen', 'GabeK@reimb.db', 2);
 INSERT INTO ers_reimbursement_resolutions(reimb_res) VALUES ('ACCEPTED'), ('DENIED');
 
-SELECT * FROM ers_reimbursements;
+SELECT * FROM ers_reimbursement_types ;
 
 SELECT * FROM ers_reimbursement_resolutions;
 
