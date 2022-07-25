@@ -4,11 +4,6 @@ import com.revature.models.Reimbursement;
 import com.revature.daos.AuthDAO;
 import com.revature.daos.ReimbursementDAO;
 import io.javalin.http.Handler;
-import io.javalin.http.UploadedFile;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
