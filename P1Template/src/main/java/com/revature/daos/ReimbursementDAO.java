@@ -15,13 +15,12 @@ public class ReimbursementDAO implements ReimbursementDAOInterface {
 		
 		try (Connection conn = ConnectionUtil.getConnection()) {
 			String str_sql = "INSERT INTO ers_reimbursements(reimb_amount, reimb_submitted, reimb_description,"
-					+ " users_author_fk, reimb_status_fk, reimb_type_fk, reimb_receipt) VALUES (?, current_timestamp, ?, ?, 1, ?, ?);";
+					+ " users_author_fk, reimb_status_fk, reimb_type_fk) VALUES (?, current_timestamp, ?, ?, 1, ?);";
 			PreparedStatement stmt = conn.prepareStatement(str_sql);
 			stmt.setInt(1, reimb.getInt_amount());
 			stmt.setString(2, reimb.getStr_description());
 			stmt.setInt(3, reimb.getInt_author_id());
 			stmt.setInt(4, reimb.getInt_type_id());
-			stmt.setBytes(5, reimb.getReceipt());
 			stmt.executeUpdate();
 			
 			System.out.println("---------- REIMB WAS INSERTED ---------");
@@ -132,7 +131,7 @@ public class ReimbursementDAO implements ReimbursementDAOInterface {
 		
 		try (Connection conn = ConnectionUtil.getConnection()) {
 			String str_sql = "UPDATE ers_reimbursements SET reimb_resolved = current_timestamp, "
-					+ "users_resolver_fk = ?, reimb_resolution = ? WHERE reimb_id = ?";
+					+ "users_resolver_fk = ?, reimb_resolution = ?, reimb_status = 2 WHERE reimb_id = ?";
 			PreparedStatement stmt = conn.prepareStatement(str_sql);
 			stmt.setInt(1, AuthDAO.cur_user.getUser_id());
 			stmt.setInt(2, res_id);

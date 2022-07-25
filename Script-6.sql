@@ -42,12 +42,18 @@ CREATE TABLE ers_user_roles (
 	user_role			TEXT
 );
 
-INSERT INTO ers_reimbursement_statuses(reimb_status) VALUES ('status test 1'),(' status test 2');
-INSERT INTO ers_reimbursement_types (reimb_type) VALUES ('type test 1'), ('type test 2');
+drop table ers_user_roles;
+drop table ers_reimbursement_resolutions;
+drop table ers_reimbursement_statuses;
+drop table ers_reimbursement_types;
+drop table ers_reimbursements;
+drop table ers_users;
+
 INSERT INTO ers_user_roles (user_role) VALUES ('ADMIN'), ('USER');
-INSERT INTO ers_users (users_username, users_password, users_first_name, users_last_name, users_email, users_role_fk) VALUES ('ADMIN', '123robot', 'admin', 'admin', 'admin@reimb.db', 1), ('user test 1', 'password', 'user', 'test 1', 'user@reimb.db', 2);
+INSERT INTO ers_reimbursement_statuses(reimb_status) VALUES ('Submitted'),('Approved');
+INSERT INTO ers_reimbursement_types (reimb_type) VALUES ('Travel'), ('Food'), ('Lodging'), ('Other');
+INSERT INTO ers_users (users_username, users_password, users_first_name, users_last_name, users_email, users_role_fk) VALUES ('FredK', '123robot', 'Fred', 'Kelemen', 'FredK@reimb.db', 1), ('GabeK', 'password', 'Gabe', 'Kelemen', 'GabeK@reimb.db', 2);
 INSERT INTO ers_reimbursement_resolutions(reimb_res) VALUES ('ACCEPTED'), ('DENIED');
-INSERT INTO ers_reimbursements (reimb_amount, reimb_submitted, reimb_resolved, reimb_description, users_author_fk, users_resolver_fk, reimb_status_fk, reimb_type_fk, reimb_resolution, reimb_receipt) VALUES (100, current_timestamp, NULL, 'test reimb 1', 2, NULL, 1, 2, null, pg_read_binary_file('K:\Work Files\project_1\project1-Fred374\imgs\receipt.jpg'));
 
 SELECT * FROM ers_reimbursements;
 

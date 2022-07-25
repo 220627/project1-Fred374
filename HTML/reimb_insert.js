@@ -1,19 +1,20 @@
 const url = 'http://localhost:3001/';
 
-document.getElementById('request').onclick = insertReimb;
+document.getElementById('requestTravel').onclick = function() {insertReimb(1)};
+document.getElementById('requestFood').onclick = function() {insertReimb(2)};
+document.getElementById('requestLodging').onclick = function() {insertReimb(3)};
+document.getElementById('requestOther').onclick = function() {insertReimb(4)};
 document.getElementById('home').onclick = returnHome;
 
-async function insertReimb() {
+async function insertReimb(int_type_id) {
 
     let int_amount = document.getElementById('reimbAmount').value;
     let str_description = document.getElementById('reimbDesc').value;
     let int_author_id = document.cookie.split("=");
     int_author_id = int_author_id[1].split(";");
     int_author_id = int_author_id[0];
-    let int_type_id = document.getElementById('reimbType').value;
 
     let reimb = { int_amount: int_amount, str_description: str_description, user_author: { user_id: int_author_id }, int_type_id: int_type_id };
-    console.log(reimb);
 
     let response = await fetch(url + "insert_reimbursement", {
         method: "POST",
@@ -28,6 +29,7 @@ async function insertReimb() {
         alert(response.status + " Error : CHECK CONSOLE.");
     }
 
+    returnHome();
 }
 
 async function returnHome() {

@@ -86,3 +86,20 @@
 2022-07-22 16:04:10 INFO  AuthController:27 - User Successfully Logged In
 2022-07-22 16:04:19 INFO  ReimbursementController:29 - User Added New Reimbursement
 2022-07-22 16:27:28 INFO  ReimbursementController:29 - User Added New Reimbursement
+2022-07-25 10:05:34 INFO  AuthController:27 - User Successfully Logged In
+2022-07-25 10:05:37 INFO  ReimbursementController:40 - User Retrieved All Reimbursements
+2022-07-25 10:05:50 INFO  ReimbursementController:40 - User Retrieved All Reimbursements
+2022-07-25 10:05:58 INFO  ReimbursementController:54 - User Retrieved All Open Reimbursements
+2022-07-25 10:06:23 INFO  ReimbursementController:54 - User Retrieved All Open Reimbursements
+2022-07-25 10:06:26 INFO  ReimbursementController:72 - User Retrieved All Reimbursements for User ID 1
+2022-07-25 10:06:35 INFO  ReimbursementController:72 - User Retrieved All Reimbursements for User ID 2
+2022-07-25 10:06:56 INFO  ReimbursementController:72 - User Retrieved All Reimbursements for User ID 2
+2022-07-25 10:17:22 INFO  AuthController:27 - User Successfully Logged In
+2022-07-25 10:17:39 INFO  AuthController:40 - User Logged Out
+2022-07-25 10:17:47 INFO  AuthController:27 - User Successfully Logged In
+2022-07-25 10:17:58 INFO  AuthController:40 - User Logged Out
+2022-07-25 10:34:44 INFO  AuthController:27 - User Successfully Logged In
+2022-07-25 10:36:38 INFO  AuthController:27 - User Successfully Logged In
+2022-07-25 10:36:41 INFO  ReimbursementController:40 - User Retrieved All Reimbursements
+2022-07-25 10:38:05 INFO  AuthController:27 - User Successfully Logged In
+2022-07-25 10:38:14 INFO  ReimbursementController:33 - User Failed To Add New Reimbursement

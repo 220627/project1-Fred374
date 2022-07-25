@@ -18,7 +18,6 @@ async function loginFunction() {
         let data = await response.json();
         document.cookie = "user_id=" + data.user_id;
         document.cookie = "role_id=" + data.role.role_id;
-        console.log(document.cookie);
         alert("Welcome " + data.first_name);
         if (data.role.role_id == 1) {
             window.location = "reimb_admin.html";

@@ -119,7 +119,6 @@ async function getYourReimbs() {
     let userId = document.cookie.split("=");
     userId = userId[1].split(";");
     userId = userId[0];
-    console.log(document.cookie);
     let response = await fetch(url + "user_reimbursements/" + userId);
 
     if (response.status === 200) {
@@ -174,7 +173,6 @@ async function getYourReimbs() {
 async function getUserReimbs() {
     let user = document.getElementById("reimbUserId").value;
     let response = await fetch(url + "user_reimbursements/" + user);
-    console.log(response);
 
     if (response.status === 200) {
         document.getElementById("reimbBody").innerHTML = "";
