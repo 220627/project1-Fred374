@@ -42,7 +42,7 @@ The back-end system shall use JDBC to connect to a Postgres database. The middle
 * Remember the logical progression of our java applications. We tend to go from the main method, to the controller layer, to the service layer, to the DAO (aka repository) layer. There are exceptions to this rule of thumb, but in general it's a good rule to follow, and my P0Demo will be refactored into the P1Demo accordingly. 
 
 
-* I (Ben) can only teach you so much -- This project will require you to do a bit of self study since I won't make the P1Demo as hand holdy as the P0Demo. Your BEST resource when self studying besides google is each other. This is a great opportunity to figure out how to articulate your problems to others and help others with their own problems. Web dev is not an introverted role... YES IT IS!
+* I (Ben) can only teach you so much -- This project will require you to do a bit of self study since I won't make the P1Demo as hand holdy as the P0Demo. Your BEST resource when self studying besides google is each other. This is a great opportunity to figure out how to articulate your problems to others and help others with their own problems. Web dev is not an introverted role...
 
 
 * When creating your applications, the diagrams above are simply suggestions for best practice... There are easier and harder ways to implement the same thing. For instance: 
