@@ -11,7 +11,7 @@ public class AuthDAO implements AuthDAOInterface {
 	
 	public static User cur_user;
 	
-	public boolean login(String username, String password) {
+	public int login(String username, String password) {
 		
 		try (Connection conn = ConnectionUtil.getConnection()) {
 			String str_sql = "SELECT * FROM ers_users WHERE users_username = ? AND users_password = ?";
@@ -29,14 +29,15 @@ public class AuthDAO implements AuthDAOInterface {
 						rs.getString("users_email"),
 						rs.getInt("users_role_fk")
 						);
-				return true;
+				return 1;
 			}
 			
 		}catch (SQLException e) {
 			System.out.println("---------- CONNECTION FAILURE AT LOGIN ----------");
 			e.printStackTrace();
+			return 2;
 		}
-		return false;
+		return 0;
 	}
 
 }

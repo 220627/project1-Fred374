@@ -2,6 +2,6 @@ package com.revature.daos;
 
 public interface AuthDAOInterface {
 	
-	boolean login(String username, String password);
+	int login(String username, String password);
 
 }

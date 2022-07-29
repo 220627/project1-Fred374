@@ -21,16 +21,19 @@ public class AuthController {
 		Gson gson = new Gson();
 		String body = ctx.body();
 		LoginDTO user = gson.fromJson(body, LoginDTO.class);
-		String name = AUTH_SERVICE.login(user.getUsername(), user.getPassword());
+		int name = AUTH_SERVICE.login(user.getUsername(), user.getPassword());
 		
-		if (name != null) {
+		if (name == 1) {
 			log.info("User Successfully Logged In");
 			ses = ctx.req.getSession();
 			ctx.result(gson.toJson(AuthDAO.cur_user));
 			ctx.status(202);
-		} else {
-			log.info("User Failed to Log In");
+		} else if (name == 0) {
+			log.info("User Failed to Log In At User Level");
 			ctx.status(401);
+		} else {
+			log.info("User Failed to Log In At Server Level");
+			ctx.status(523);
 		}
 		
 	};
@@ -45,7 +48,7 @@ public class AuthController {
 		} else {
 			log.info("User Failed to Log Out");
 			ctx.result("Not Currently Logged In");
-			ctx.status(401);
+			ctx.status(523);
 		}
 	};
 }

@@ -24,7 +24,9 @@ async function loginFunction() {
         } else {
             window.location = "reimb_user.html";
         }
-    } else {
+    } else if (response.status === 401) {
         alert("Failed to Log In, Check Your Username and Password");
+    } else {
+        alert(response.status + " WHAT THE HECK IS A " + response.status)
     }
 }

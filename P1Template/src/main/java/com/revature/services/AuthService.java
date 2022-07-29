@@ -6,12 +6,14 @@ public class AuthService {
 	
 	private static final AuthDAO AUTH_DAO = new AuthDAO();
 	
-	public String login(String username, String password) {
+	public int login(String username, String password) {
 		
-		if (AUTH_DAO.login(username,  password)) {
-			return AuthDAO.cur_user.getFirst_name();
+		if (AUTH_DAO.login(username,  password) == 1) {
+			return 1;
+		} else if (AUTH_DAO.login(username,  password) == 2) {
+			return 2;
 		} else {
-			return null;
+			return 0;
 		}
 	}
 }
