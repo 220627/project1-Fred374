@@ -59,7 +59,7 @@ SELECT * FROM ers_reimbursement_types ;
 
 SELECT * FROM ers_reimbursement_resolutions;
 
-select * from ers_users where users_username = 'ADMIN';
+select * from ers_users
 
 select * from pg_catalog.pg_user;
 

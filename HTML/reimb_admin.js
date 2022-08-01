@@ -241,11 +241,10 @@ async function logoutFunction() {
 async function resolveFunc() {
 
     let reimb = document.getElementById("reimbResolveId").value;
-    userId = userId[1].split(";");
-    userId = userId[0];
+    let res = document.getElementById("resId").value;
     let response = await fetch(url + "resolve_reimbursement/" + reimb, {
         method: "POST",
-        body: userId
+        body: res
     });
 
     if (response.status === 200) {

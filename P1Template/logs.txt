@@ -119,3 +119,30 @@
 2022-07-29 14:49:05 INFO  AuthController:32 - User Failed to Log In
 2022-07-29 14:51:57 INFO  AuthController:32 - User Failed to Log In
 2022-07-29 14:59:58 INFO  AuthController:35 - User Failed to Log In At Server Level
+2022-08-01 11:41:24 INFO  AuthController:27 - User Successfully Logged In
+2022-08-01 11:41:30 INFO  ReimbursementController:67 - User Retrieved All Reimbursements for User ID 2
+2022-08-01 11:41:47 INFO  ReimbursementController:24 - User Added New Reimbursement
+2022-08-01 11:41:52 INFO  ReimbursementController:67 - User Retrieved All Reimbursements for User ID 2
+2022-08-01 11:41:56 INFO  AuthController:43 - User Logged Out
+2022-08-01 11:42:04 INFO  AuthController:32 - User Failed to Log In At User Level
+2022-08-01 11:42:12 INFO  AuthController:32 - User Failed to Log In At User Level
+2022-08-01 11:42:49 INFO  AuthController:27 - User Successfully Logged In
+2022-08-01 11:42:53 INFO  ReimbursementController:35 - User Retrieved All Reimbursements
+2022-08-01 11:43:00 INFO  ReimbursementController:49 - User Retrieved All Open Reimbursements
+2022-08-01 11:43:07 INFO  ReimbursementController:67 - User Retrieved All Reimbursements for User ID 1
+2022-08-01 11:43:14 INFO  ReimbursementController:67 - User Retrieved All Reimbursements for User ID 2
+2022-08-01 11:43:30 INFO  ReimbursementController:67 - User Retrieved All Reimbursements for User ID 2
+2022-08-01 11:44:01 INFO  ReimbursementController:24 - User Added New Reimbursement
+2022-08-01 11:44:05 INFO  AuthController:43 - User Logged Out
+2022-08-01 11:44:39 INFO  AuthController:27 - User Successfully Logged In
+2022-08-01 11:47:48 INFO  ReimbursementController:101 - User Failed To Resolve Reimbursement Number 2
+2022-08-01 11:48:05 INFO  ReimbursementController:35 - User Retrieved All Reimbursements
+2022-08-01 11:48:18 INFO  ReimbursementController:101 - User Failed To Resolve Reimbursement Number 5
+2022-08-01 11:52:32 INFO  ReimbursementController:101 - User Failed To Resolve Reimbursement Number 5
+2022-08-01 11:54:08 INFO  ReimbursementController:35 - User Retrieved All Reimbursements
+2022-08-01 11:54:31 INFO  ReimbursementController:101 - User Failed To Resolve Reimbursement Number 2
+2022-08-01 11:55:58 INFO  AuthController:27 - User Successfully Logged In
+2022-08-01 11:56:03 INFO  ReimbursementController:101 - User Failed To Resolve Reimbursement Number 1
+2022-08-01 11:56:45 INFO  AuthController:27 - User Successfully Logged In
+2022-08-01 11:56:49 INFO  ReimbursementController:97 - User Resolved Reimbursement Number 1
+2022-08-01 11:56:51 INFO  ReimbursementController:35 - User Retrieved All Reimbursements

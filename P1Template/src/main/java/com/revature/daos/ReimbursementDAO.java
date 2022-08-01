@@ -131,11 +131,12 @@ public class ReimbursementDAO implements ReimbursementDAOInterface {
 		
 		try (Connection conn = ConnectionUtil.getConnection()) {
 			String str_sql = "UPDATE ers_reimbursements SET reimb_resolved = current_timestamp, "
-					+ "users_resolver_fk = ?, reimb_resolution = ?, reimb_status = 2 WHERE reimb_id = ?";
+					+ "users_resolver_fk = ?, reimb_resolution = ?, reimb_status_fk = 2 WHERE reimb_id = ?";
 			PreparedStatement stmt = conn.prepareStatement(str_sql);
 			stmt.setInt(1, AuthDAO.cur_user.getUser_id());
 			stmt.setInt(2, res_id);
 			stmt.setInt(3, reimb_id);
+			System.out.println(stmt);
 			stmt.executeUpdate();
 			
 			System.out.println("---------- REIMB WAS RESOLVED ----------");
